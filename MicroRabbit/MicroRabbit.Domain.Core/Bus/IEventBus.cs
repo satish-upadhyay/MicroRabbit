@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MicroRabbit.Domain.Core.Commands;
+using MicroRabbit.Domain.Core.Events;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
