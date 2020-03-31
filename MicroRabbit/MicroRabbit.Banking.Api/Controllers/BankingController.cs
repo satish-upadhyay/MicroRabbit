@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using MicroRabbit.Banking.Application.Interfaces;
 using MicroRabbit.Banking.Application.Models;
 using MicroRabbit.Banking.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+
 
 namespace MicroRabbit.Banking.Api.Controllers
 {
@@ -14,19 +11,7 @@ namespace MicroRabbit.Banking.Api.Controllers
     [Route("api/[controller]")]
     public class BankingController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
-
-        //private readonly ILogger<BankingController> _logger;
         private readonly IAccountService _accountService;
-
-        //public BankingController(ILogger<BankingController> logger)
-        //{
-        //    _logger = logger;
-        //}
-
         public BankingController(IAccountService accountService)
         {
             _accountService = accountService;
